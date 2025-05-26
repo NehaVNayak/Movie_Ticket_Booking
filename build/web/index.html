@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Booking</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f0f8f9;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left-section {
+      background-color: #2563eb;
+      color: white;
+      width: 55%;
+      padding: 60px 50px;
+      z-index: 2;
+      position: relative;
+      clip-path: path('M 0 0 L 100% 0 C 90% 30% 90% 70% 100% 100% L 0 100% Z');
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .right-section {
+      background-color: white;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: #2563eb;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .left-section h1 {
+      font-size: 48px;
+      margin: 40px 0 20px;
+      line-height: 1.2;
+    }
+
+    .left-section p {
+      margin-bottom: 30px;
+      max-width: 400px;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    .left-section button {
+      padding: 12px 24px;
+      border: 2px solid white;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 30px;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .left-section button:hover {
+      background-color: white;
+      color: #007bff;
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icons div {
+      width: 40px;
+      height: 40px;
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    .icons div:hover {
+      background-color: white;
+      color: #007bff;
+    }
+
+    .image-section img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-section, .right-section {
+        width: 100%;
+        clip-path: none;
+        padding: 40px 30px;
+      }
+      .logo {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <div class="nav">
+        <a href="userlogin.jsp">LOGIN</a>
+        <a href="register.jsp">REGISTER</a>
+        <a href="about.jsp">ABOUT</a>
+        <a href="contact.jsp">CONTACT</a>
+      </div>
+      <div class="logo">LOGO</div>
+      <h1>TICKET<br>BOOKING</h1>
+      <p>Book your movie tickets instantly and securely with our easy-to-use platform. Choose your favorite film, select your seats, and enjoy the show!</p>
+
+      <form action="userlogin.jsp" method="get">
+    <button type="submit">START BOOKING</button>
+</form>
+
+      <div class="icons">
+        <div>★</div>
+        <div>♥</div>
+        <div>🌐</div>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="image-section">
+        <img src="./image/dummy1.png" alt="Ticket Booking Illustration" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
